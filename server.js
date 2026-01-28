@@ -6,7 +6,10 @@ const cors = require('cors');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
+const compression = require('compression');
 const app = express();
+
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -143,3 +146,6 @@ app.post('/login', async (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
+
+// Small performance: ensure express uses etags and sensible cache-control for static assets
+app.set('etag', 'strong');
