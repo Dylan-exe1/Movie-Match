@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name=\"description\" content=\"Movie Match — find movies you'll love. Modernized UI and faster performance.\">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MovieMatch | Compare Movies</title>
-  <link rel="stylesheet" href="../style.css">
+    <link rel=\"preload\" href=\"/styles/main.css\" as=\"style\">
+    <link rel=\"stylesheet\" href=\"/styles/main.css\">
+    <noscript><link rel=\"stylesheet\" href=\"/styles/main.css\"></noscript>
+  
   <style>
     .red-b {
       background: #ff4d6d;
@@ -17,6 +21,7 @@
       transition: all 0.3s ease;
     }
   </style>
+    <meta name="theme-color" content="#0b1020">
 </head>
 <body>
   <div class="overlay"></div>
@@ -109,5 +114,6 @@
       }
     });
   </script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
